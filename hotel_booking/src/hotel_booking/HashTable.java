@@ -9,8 +9,20 @@ package hotel_booking;
  * @author Svetlana Valentina
  */
 public class HashTable<K, V> {
-    private SimpleList<K, V>[] array;
+    private SimpleList<Entry<K, V>>[] array;
     private int size;
+    
+    private static class Entry<K, V> {
+        K key;
+        V value;
+        Entry<K, V> next;
+        
+        Entry(K key, V value){
+            this.key = key;
+            this.value= value;
+            this.next = null;
+        }
+    }
 
     public HashTable(int size) {
         this.size = size;
@@ -19,36 +31,70 @@ public class HashTable<K, V> {
             array[i] = new SimpleList<>();
         }
     }
-
-    /**
-     * @return the array
-     */
-    public SimpleList<K, V>[] getArray() {
-        return array;
-    }
-
-    /**
-     * @param array the array to set
-     */
-    public void setArray(SimpleList<K, V>[] array) {
-        this.array = array;
-    }
-
-    /**
-     * @return the size
-     */
-    public int getSize() {
-        return size;
-    }
-
-    /**
-     * @param size the size to set
-     */
-    public void setSize(int size) {
-        this.size = size;
+    
+    private int getHash(K key){
+        int hashCode = key.hashCode();
+        return Math.abs(hashCode) % size;
     }
     
+    public void put(K key, V value){
+        int index = getHash(key);
+        if (array[index] == null){
+            array[index] = new SimpleList<>();
+        }
+        SimpleList<Entry<K, V>> list = array[index];
+        NodoLista<Entry<K, V>> node = list.getHead();
+        while(node != null){
+            Entry<K, V> entry = node.getData();
+            if (entry.key.equals(key)){
+                entry.value = value;
+                return;
+            }
+            node = node.getPnext();
+        }
+        list.add(new Entry<>(key, value));
+    }
     
+    public V get(K key){
+        int index = getHash(key);
+        if (array[index] == null){
+            return null;
+        }
+        SimpleList<Entry<K, V>> list = array[index];
+        NodoLista<Entry<K, V>> node = list.getHead();
+        while(node != null) {
+            Entry<K, V> entry = node.getData();
+            if(entry.key.equals(key)) {
+                return entry.value;
+            }
+            node = node.getPnext();
+        }
+        return null;
+    }
     
-    
+    public void remove(K key){
+        int index = getHash(key);
+        
+        if (array[index] == null){
+            return;
+        }
+        SimpleList<Entry<K, V>> list = array[index];
+        NodoLista<Entry<K, V>> node = list.getHead();
+        NodoLista<Entry<K, V>> prev = null;
+        
+        while (node != null){
+            Entry<K, V> entry = node.getData();
+            if (entry.key.equals(key)){
+                if (prev == null){
+                    list.setHead(node.getPnext());
+                } else {
+                    prev.setPnext(node.getPnext());
+                }
+                return;
+            }
+            prev = node;
+            node = node.getPnext();
+        }
+    }
+
 }

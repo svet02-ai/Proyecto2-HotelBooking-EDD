@@ -8,26 +8,26 @@ package hotel_booking;
  *
  * @author Svetlana Valentina
  */
-public class SimpleList<K, V> {
-    private NodoLista<K, V> head;
+public class SimpleList<T> {
+    private NodoLista<T> head;
     private int size;
 
     public SimpleList() {
         this.head = null;
         this.size = 0;
     }
-
+    
     /**
      * @return the head
      */
-    public NodoLista<K, V> getHead() {
+    public NodoLista<T> getHead() {
         return head;
     }
 
     /**
      * @param head the head to set
      */
-    public void setHead(NodoLista<K, V> head) {
+    public void setHead(NodoLista<T> head) {
         this.head = head;
     }
 
@@ -44,52 +44,57 @@ public class SimpleList<K, V> {
     public void setSize(int size) {
         this.size = size;
     }
-    
+
     public boolean isEmpty(){
         return getHead() == null;
     }
     
-    public void add(K key, V value){
-        NodoLista<K, V> node = new NodoLista<>(key, value);
+    public void add(T data){
+        NodoLista<T> node = new NodoLista<>(data);
         if (isEmpty()){
             setHead(node);
         } else {
             node.setPnext(getHead());
             setHead(node);
         }
-        size++;
+        setSize(getSize() + 1);
     }
     
-    public V get(K key){
-        if (isEmpty()){
-            return null;
+    public T get(int index){
+        NodoLista<T> node = head;
+        for (int i = 0; i < index; i++) {
+            if (node == null) {
+                return null;
+            }
+            node = node.getPnext();
+        }
+        if (node != null) {
+            return node.getData();
         } else {
-            NodoLista<K, V> node = this.head;
-            while (node != null){
-             if (node.getKey().equals(key)){
-                return node.getValue();   
-            }
-            node = node.getPnext();
-            }
+            return null;
         }
-        return null;
     }
     
-    public void delete(K key){
-        if (isEmpty()){
-            return;
+    public boolean remove(T data){
+        if (head == null){
+            return false;
         }
-        if (getHead().getKey().equals(key)){
+        if (getHead().getData().equals(data)){
             setHead(getHead().getPnext());
-            return;
+            size--;
+            return true;
         }
-        NodoLista<K, V> node = this.head;
-        while(node.getPnext() != null){
-            if (node.getPnext().getKey().equals(key)){
-                node.setPnext(node.getPnext().getPnext());
-                return;
+        NodoLista<T> current = this.head;
+        NodoLista<T> prev = null;
+        while(current != null){
+            if (current.getData().equals(data)){
+                prev.setPnext(current.getPnext());
+                size--;
+                return true;
             }
-            node = node.getPnext();
+            prev = current;
+            current = current.getPnext();
         }
+        return false;
     }
 }
