@@ -5,7 +5,7 @@
 package hotel_booking;
 
 /**
- *
+ * Hola, estoy aprendiendo a usar branches
  * @author Svetlana Valentina
  */
 public class HashTable<K, V> {
