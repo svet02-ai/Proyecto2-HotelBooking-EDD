@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package hotel_booking;
+import Functions.Parser;
+import Functions.CSVreader;
 
 /**
  *
@@ -14,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        App.Start();
     }
     
 }
