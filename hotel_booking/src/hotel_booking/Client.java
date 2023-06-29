@@ -4,31 +4,47 @@
  */
 package hotel_booking;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Svetlana Valentina
  */
 public class Client {
-    private int ci;
     private String firstName;
     private String lastName;
-    private String email;
-    private String gender;
-    private String phoneNumber;
+    private String room;
     private String checkinDate;
     private String checkoutDate;
+    private String ci;
+    private String gender;
+    private String email;
+    private String phoneNumber;
+
+    public Client(String firstName, String lastName, String room, String checkinDate, String checkoutDate, String ci, String gender, String email, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.room = room;
+        this.checkinDate = checkinDate;
+        this.checkoutDate = checkoutDate;
+        this.ci = ci;
+        this.gender = gender;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+    
+    
 
     /**
      * @return the ci
      */
-    public int getCi() {
+    public String getCi() {
         return ci;
     }
 
     /**
      * @param ci the ci to set
      */
-    public void setCi(int ci) {
+    public void setCi(String ci) {
         this.ci = ci;
     }
 
@@ -128,6 +144,20 @@ public class Client {
      */
     public void setCheckoutDate(String checkoutDate) {
         this.checkoutDate = checkoutDate;
+    }
+
+    /**
+     * @return the room
+     */
+    public String getRoom() {
+        return room;
+    }
+
+    /**
+     * @param room the room to set
+     */
+    public void setRoom(String room) {
+        this.room = room;
     }
     
     public static void Estado(HashTable habitaciones){
