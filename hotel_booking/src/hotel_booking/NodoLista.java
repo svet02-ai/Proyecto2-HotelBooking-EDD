@@ -8,58 +8,42 @@ package hotel_booking;
  *
  * @author Svetlana Valentina
  */
-public class NodoLista<K, V> {
-    private K key;
-    private V value;
-    private NodoLista<K, V> pnext;
+public class NodoLista<T> {
+    private T data;
+    private NodoLista<T> pnext;
 
-    public NodoLista(K key, V value) {
-        this.key = key;
-        this.value = value;
-        this.pnext = null;
+    public NodoLista(T data) {
+        this.data = data;
     }
 
     /**
-     * @return the key
+     * @return the data
      */
-    public K getKey() {
-        return key;
+    public T getData() {
+        return data;
     }
 
     /**
-     * @param key the key to set
+     * @param data the data to set
      */
-    public void setKey(K key) {
-        this.key = key;
-    }
-
-    /**
-     * @return the value
-     */
-    public V getValue() {
-        return value;
-    }
-
-    /**
-     * @param value the value to set
-     */
-    public void setValue(V value) {
-        this.value = value;
+    public void setData(T data) {
+        this.data = data;
     }
 
     /**
      * @return the pnext
      */
-    public NodoLista<K, V> getPnext() {
+    public NodoLista<T> getPnext() {
         return pnext;
     }
 
     /**
      * @param pnext the pnext to set
      */
-    public void setPnext(NodoLista<K, V> pnext) {
+    public void setPnext(NodoLista<T> pnext) {
         this.pnext = pnext;
     }
     
     
+
 }
