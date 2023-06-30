@@ -3,46 +3,49 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package hotel_booking;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Svetlana Valentina
  */
 public class Reservation {
-    private String room;
     private String firstName;
     private String lastName;
-    private String email;
-    private String gender;
-    private String phone;
+    private String room;
     private String checkinDate;
+    private String checkoutDate;
+    private String ci;
+    private String gender;
+    private String email;
+    private String phoneNumber;
 
-    public Reservation(String room, String firstName, String lastName, String email, String gender, String phone, String checkinDate) {
-        if (!room.equals("")){
-            this.room = room;
-        } else {
-            this.room = null;
-        }
+    public Reservation(String firstName, String lastName, String room, String checkinDate, String checkoutDate, String ci, String gender, String email, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-        this.phone = phone;
-        this.checkinDate = checkinDate;
-    }
-
-    /**
-     * @return the room
-     */
-    public String getRoom() {
-        return room;
-    }
-
-    /**
-     * @param room the room to set
-     */
-    public void setRoom(String room) {
         this.room = room;
+        this.checkinDate = checkinDate;
+        this.checkoutDate = checkoutDate;
+        this.ci = ci;
+        this.gender = gender;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+    
+    
+
+    /**
+     * @return the ci
+     */
+    public String getCi() {
+        return ci;
+    }
+
+    /**
+     * @param ci the ci to set
+     */
+    public void setCi(String ci) {
+        this.ci = ci;
     }
 
     /**
@@ -102,17 +105,17 @@ public class Reservation {
     }
 
     /**
-     * @return the phone
+     * @return the phoneNumber
      */
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
-     * @param phone the phone to set
+     * @param phoneNumber the phoneNumber to set
      */
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -128,6 +131,49 @@ public class Reservation {
     public void setCheckinDate(String checkinDate) {
         this.checkinDate = checkinDate;
     }
+
+    /**
+     * @return the checkoutDate
+     */
+    public String getCheckoutDate() {
+        return checkoutDate;
+    }
+
+    /**
+     * @param checkoutDate the checkoutDate to set
+     */
+    public void setCheckoutDate(String checkoutDate) {
+        this.checkoutDate = checkoutDate;
+    }
+
+    /**
+     * @return the room
+     */
+    public String getRoom() {
+        return room;
+    }
+
+    /**
+     * @param room the room to set
+     */
+    public void setRoom(String room) {
+        this.room = room;
+    }
     
-    
+    public static void Estado(HashTable habitaciones){
+        String nombre = JOptionPane.showInputDialog(null, "Por favor ingrese el nombre completo: ");
+        if (nombre == null) {
+            JOptionPane.showMessageDialog(null, "Ingreso invalido");
+        } else {
+            nombre =  nombre.toUpperCase();
+            if (nombre.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Por favor ingrese el nombre completo: ");
+            } else if (habitaciones.get(nombre) == null) {
+                JOptionPane.showMessageDialog(null, "La habitación de " + nombre + " no se encuentra registrada. Por favor, haga una reserva");
+            } else {
+                JOptionPane.showMessageDialog(null, "La habitación de " + nombre + " es la número: " + habitaciones.get(nombre) + ".");
+            }
+        }
+
+    }
 }
