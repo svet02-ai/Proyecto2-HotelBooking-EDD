@@ -21,7 +21,7 @@ public class App {
      // los convirte en sus respectivas clases para poder entrarlos en hashmaps y ABB
      HashTable myHashtable = Parser.parseHabitaciones(data2);
      myHashtable = Parser.parseStatus(data3, myHashtable);
-     Parser.parseClientes(data1);
+     Parser.parseReservation(data1);
      Parser.parseHistorico(data4);
     }
 }
