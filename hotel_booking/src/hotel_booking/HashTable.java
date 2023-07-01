@@ -27,7 +27,7 @@ public class HashTable<K, V> {
     public HashTable(int size) {
         this.size = size;
         array = new SimpleList[size];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < size; i++) {
             array[i] = new SimpleList<>();
         }
     }
@@ -95,6 +95,27 @@ public class HashTable<K, V> {
             prev = node;
             node = node.getPnext();
         }
+    }
+    
+    public void replaceValue(K key,String replace){
+        V value = get(key);
+        this.remove(key);
+        this.put(key,(V)replace);     
+    }
+    
+    public K getHab(V value){
+        int i = 0;
+        while(i < this.size){
+            NodoLista<Entry<K, V>> aux = array[i].getHead();
+            while(aux != null){
+                if(aux.getData().value.equals(value)){
+                    return aux.getData().key;
+                }
+                aux = aux.getPnext();
+            }
+            i++;
+        }
+        return null;
     }
 
 }

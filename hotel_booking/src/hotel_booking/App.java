@@ -13,8 +13,15 @@ public class App {
     
     public static void Start(){
         
-        //String path = "C:\\Users\\Svetlana Valentina\\OneDrive\\Desktop\\EDD\\Booking_hotel - habitaciones.csv";
-        String data = CSVreader.getCsv("Booking_hotel - estado.csv");
-        Parser.parseHabitaciones(data);
+        // importa los csv ya determinados
+     String data1 = CSVreader.getCsv("Booking_hotel - General.csv");
+     String data2 = CSVreader.getCsv("Booking_hotel - Habitaciones.csv");
+     String data3 = CSVreader.getCsv("Booking_hotel - Estado.csv");
+     String data4 = CSVreader.getCsv("Booking_hotel - Historico.csv");
+     // los convirte en sus respectivas clases para poder entrarlos en hashmaps y ABB
+     //HashTable myHashtable = Parser.parseHabitaciones(data2);
+     //myHashtable = Parser.parseStatus(data3, myHashtable);
+     //Parser.parseReservation(data1);
+     //Parser.parseHistorico(data4);
     }
 }
