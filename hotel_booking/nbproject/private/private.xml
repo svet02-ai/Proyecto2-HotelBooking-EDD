@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-<<<<<<< HEAD
-=======
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Svetlana%20Valentina/OneDrive/Desktop/ProyectoHotelBooking/hotel_booking/src/hotel_booking/Main.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/SearchBinaryTree.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/App.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/Constructor.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/NodoLista.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/Room.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/Main.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/DataValidation.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/HashTable.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/RoomWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/RegisterWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/Parser.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/messageWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/SimpleList.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/SearchWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/HistoryWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/Client.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/CSVreader.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/Converter.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Functions/Reciever.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/hotel_booking/BST.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/ActionWindow.java</file>
+            <file>file:/C:/Users/USUARIO%2003/Documents/NetBeansProjects/Proyecto2-HotelBooking-EDD/hotel_booking/src/Interfaces/ReservationWindow.java</file>
         </group>
     </open-files>
->>>>>>> 917d004fe4f45fbbe3ad1732523e143c657d03c9
 </project-private>
